@@ -25,6 +25,7 @@ Plug 'kaicataldo/material.vim'
 Plug 'morhetz/gruvbox'
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'herringtondarkholme/yats.vim'
 
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'ryanoasis/vim-devicons'
@@ -38,7 +39,7 @@ syntax on
 " make plugins load correctly
 
 " TODO: Leader key?
-" let mapleader = ","
+let mapleader = "\\"
 
 " security
 set modelines=0
@@ -90,7 +91,7 @@ set showmode
 set showcmd
 
 " show lines after EOF
-set scrolloff=20
+set scrolloff=10
 
 " -------------THEMING---------------
 if (has('termguicolors'))
@@ -283,8 +284,9 @@ nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 
 
 
-" control and \ toggle NERDTree
+" control n toggles nerdtree
 noremap <c-n> :NERDTreeToggle<CR>
+" control [ saves all buffers
 noremap <c-[> :wa<CR>
 
 " ---custom commands---
