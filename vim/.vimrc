@@ -1,4 +1,4 @@
-" not vi compatible
+" Not vi compatible
 set nocompatible
 
 " force plugins to load correctly
@@ -16,17 +16,18 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 Plug 'bling/vim-bufferline'
-Plug 'tpope/vim-surround'
-Plug 'scrooloose/nerdtree'
 Plug 'airblade/vim-gitgutter'
-Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'tpope/vim-surround'
 
 Plug 'kaicataldo/material.vim'
 Plug 'morhetz/gruvbox'
+Plug 'herringtondarkholme/yats.vim'
+Plug 'alampros/vim-styled-jsx'
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'herringtondarkholme/yats.vim'
+Plug 'scrooloose/nerdtree'
 
+Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'ryanoasis/vim-devicons'
 call plug#end()
@@ -282,13 +283,15 @@ nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 
 " ---------------END COC CONFIG--------------------------
 
-
-
 " control n toggles nerdtree
 noremap <c-n> :NERDTreeToggle<CR>
-" control [ saves all buffers
-noremap <c-[> :wa<CR>
+" control ; saves all buffers
+noremap <c-;> :wa<CR>
+" control [ and control ] goes back and forth between buffers
+noremap <c-[> :bp<CR>
+noremap <c-]> :bn<CR>
 
 " ---custom commands---
-command! BW :bn|:bd# " :BW to close current buffer
 
+command! BW :bn|:bd# " :BW to close current buffer
+command! -nargs=0 Prettier :CocCommand prettier.formatFile " :Prettier to format current buffer
