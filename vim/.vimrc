@@ -19,19 +19,18 @@ Plug 'bling/vim-bufferline'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-surround'
 
-Plug 'kaicataldo/material.vim'
 Plug 'morhetz/gruvbox'
 Plug 'herringtondarkholme/yats.vim'
 Plug 'alampros/vim-styled-jsx'
+Plug 'nathanaelkane/vim-indent-guides'
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'scrooloose/nerdtree'
 
+Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'ryanoasis/vim-devicons'
 call plug#end()
-
 " auto-install vim plugins
 autocmd! VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)')) | PlugInstall --sync | q | endif
 
@@ -41,6 +40,9 @@ syntax on
 
 " TODO: Leader key?
 let mapleader = "\\"
+
+" set new regexp engine
+set re=1
 
 " security
 set modelines=0
@@ -67,6 +69,9 @@ set shiftwidth=2
 set softtabstop=2
 set expandtab
 set noshiftround
+set smarttab
+set showmatch
+
 
 " cursor motion
 set scrolloff=3
@@ -152,12 +157,13 @@ set shortmess+=c
 set signcolumn=yes
 
 let g:coc_global_extensions = [
-\ 'coc-snippets',
+\  'coc-snippets',
 \  'coc-pairs',
 \  'coc-tsserver',
 \  'coc-eslint',
 \  'coc-prettier',
 \  'coc-json',
+\  'coc-tailwindcss'
 \]
 
 " Use tab for trigger completion with characters ahead and navigate.
@@ -285,8 +291,8 @@ nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 
 " control n toggles nerdtree
 noremap <c-n> :NERDTreeToggle<CR>
-" control ; saves all buffers
-noremap <c-;> :wa<CR>
+" control / saves all buffers
+noremap <c-/> :wa<CR>
 " control [ and control ] goes back and forth between buffers
 noremap <c-[> :bp<CR>
 noremap <c-]> :bn<CR>
