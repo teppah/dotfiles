@@ -1,6 +1,5 @@
 " Not vi compatible
 set nocompatible
-
 " force plugins to load correctly
 filetype off
 
@@ -20,11 +19,15 @@ Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-surround'
 
 Plug 'morhetz/gruvbox'
+
+Plug 'yuezk/vim-js'
 Plug 'herringtondarkholme/yats.vim'
+Plug 'maxmellon/vim-jsx-pretty'
+Plug 'mxw/vim-jsx'
 Plug 'alampros/vim-styled-jsx'
-Plug 'nathanaelkane/vim-indent-guides'
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'mattn/emmet-vim'
 
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -296,6 +299,9 @@ noremap <c-/> :wa<CR>
 " control [ and control ] goes back and forth between buffers
 noremap <c-[> :bp<CR>
 noremap <c-]> :bn<CR>
+
+" control Z , runs emmet completion
+let g:user_emmet_leader_key='<C-Z>'
 
 " ---custom commands---
 
