@@ -163,10 +163,12 @@ let g:coc_global_extensions = [
 \  'coc-snippets',
 \  'coc-pairs',
 \  'coc-tsserver',
-\  'coc-eslint',
 \  'coc-prettier',
 \  'coc-json',
-\  'coc-tailwindcss'
+\  'coc-tailwindcss',
+\  'coc-emmet',
+\  'coc-cssmodules',
+\  'coc-css'
 \]
 
 " Use tab for trigger completion with characters ahead and navigate.
