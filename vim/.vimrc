@@ -25,7 +25,6 @@ Plug 'herringtondarkholme/yats.vim'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'mxw/vim-jsx'
 Plug 'alampros/vim-styled-jsx'
-
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'mattn/emmet-vim'
 
@@ -301,6 +300,12 @@ noremap <c-/> :wa<CR>
 " control [ and control ] goes back and forth between buffers
 noremap <c-[> :bp<CR>
 noremap <c-]> :bn<CR>
+
+" remap window switching
+nnoremap <C-J> <C-W>j
+nnoremap <C-K> <C-W>k
+nnoremap <C-L> <C-W>l
+nnoremap <C-H> <C-W>h
 
 " control Z , runs emmet completion
 let g:user_emmet_leader_key='<C-Z>'
