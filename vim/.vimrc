@@ -23,7 +23,6 @@ Plug 'morhetz/gruvbox'
 Plug 'yuezk/vim-js'
 Plug 'herringtondarkholme/yats.vim'
 Plug 'maxmellon/vim-jsx-pretty'
-Plug 'mxw/vim-jsx'
 Plug 'alampros/vim-styled-jsx'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'mattn/emmet-vim'
