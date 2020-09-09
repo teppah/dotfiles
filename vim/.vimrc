@@ -20,10 +20,8 @@ Plug 'tpope/vim-surround'
 
 Plug 'morhetz/gruvbox'
 
-Plug 'yuezk/vim-js'
 Plug 'herringtondarkholme/yats.vim'
 Plug 'maxmellon/vim-jsx-pretty'
-Plug 'alampros/vim-styled-jsx'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'mattn/emmet-vim'
 
@@ -158,12 +156,10 @@ set shortmess+=c
 set signcolumn=yes
 
 let g:coc_global_extensions = [
-\  'coc-snippets',
 \  'coc-pairs',
 \  'coc-tsserver',
 \  'coc-prettier',
 \  'coc-json',
-\  'coc-tailwindcss',
 \  'coc-emmet',
 \  'coc-cssmodules',
 \  'coc-css'

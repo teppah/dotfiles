@@ -7,5 +7,7 @@
     "json",
     "javascriptreact",
     "graphql"
-  ]
+  ],
+  "typescript.showUnused": false,
+  "javascript.showUnused": false
 }

@@ -13,6 +13,19 @@ link_zsh() {
   fi
 }
 
+link_p10k() {
+  if [[ -d ~/.oh-my-zsh/custom/themes/powerlevel10k ]]; then
+    if [[ -e ~/.p10k.zsh ]]; then
+      echo ".p10k.zsh already exists, making backup to .p10k.zsh.bak"
+      mv ~/.p10k.zsh ~/.p10k.zsh.bak
+    fi
+    ln -s "$PWD/p10k/.p10k.zsh" ~/.p10k.zsh
+    echo "linked .p10k.zsh"
+  else
+    echo "powerlevel10k is not installed"
+  fi
+}
+
 link_alacritty() {
   if [[ -e ~/.config/alacritty/alacritty.yml ]]; then
     echo "~/.config/alacritty/alacritty.yml already exists, making backup to alacritty.yml.bak"
@@ -38,9 +51,9 @@ link_vim() {
   fi
   ln -s "$PWD/vim/.vimrc" ~/.vimrc
   ln -s "$PWD/vim/coc-settings.json" ~/.vim/coc-settings.json
-
 }
 
 link_zsh
+link_p10k
 link_alacritty
 link_vim
